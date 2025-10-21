@@ -1,3 +1,590 @@
-<script>
-document.write(unescape('%3C%21DOCTYPE%20html%3E%0A%3Chtml%20lang%3D%22fa%22%20dir%3D%22rtl%22%3E%0A%3Chead%3E%0A%20%20%3Cmeta%20charset%3D%22UTF-8%22%3E%0A%20%20%3Cmeta%20name%3D%22viewport%22%20content%3D%22width%3Ddevice-width%2C%20initial-scale%3D1.0%22%3E%0A%20%20%3Ctitle%3E%u06CC%u0627%u0633%u06CC%u0646%20%u0642%u0644%u0646%u062F%u0631%u06CC%20%3C/title%3E%0A%20%20%3C%21--%20Bootstrap%20CDN%20--%3E%0A%20%20%3Clink%20href%3D%22https%3A//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css%22%20rel%3D%22stylesheet%22%3E%0A%20%20%3C%21--%20Font%20Awesome%20--%3E%0A%20%20%3Clink%20rel%3D%22stylesheet%22%20href%3D%22https%3A//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css%22%3E%0A%20%20%3C%21--%20Google%20Font%20%28Montserrat%20+%20Vazir%29%20--%3E%0A%20%20%3Clink%20href%3D%22https%3A//fonts.googleapis.com/css2%3Ffamily%3DMontserrat%3Awght@400%3B700%26display%3Dswap%22%20rel%3D%22stylesheet%22%3E%0A%20%20%3Cstyle%3E%0A%20%20%20%20body%20%7B%0A%20%20%20%20%20%20margin%3A%200%3B%0A%20%20%20%20%20%20font-family%3A%20%22Vazir%22%2C%20%22Montserrat%22%2C%20sans-serif%3B%0A%20%20%20%20%20%20background%3A%20radial-gradient%28circle%20at%20center%2C%20%230e0e0e%200%25%2C%20%23000%20100%25%29%3B%0A%20%20%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20%20%20overflow-x%3A%20hidden%3B%0A%20%20%20%20%7D%0A%20%20%20%20%23particles-js%20%7B%0A%20%20%20%20%20%20position%3A%20fixed%3B%0A%20%20%20%20%20%20top%3A%200%3B%0A%20%20%20%20%20%20left%3A%200%3B%0A%20%20%20%20%20%20width%3A%20100%25%3B%0A%20%20%20%20%20%20height%3A%20100%25%3B%0A%20%20%20%20%20%20z-index%3A%200%3B%0A%20%20%20%20%20%20background%3A%20radial-gradient%28circle%20at%20center%2C%20%230a0a0a%2C%20%23000%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20header%20%7B%0A%20%20%20%20%20%20height%3A%20100vh%3B%0A%20%20%20%20%20%20display%3A%20flex%3B%0A%20%20%20%20%20%20flex-direction%3A%20column%3B%0A%20%20%20%20%20%20justify-content%3A%20center%3B%0A%20%20%20%20%20%20align-items%3A%20center%3B%0A%20%20%20%20%20%20position%3A%20relative%3B%0A%20%20%20%20%20%20z-index%3A%202%3B%0A%20%20%20%20%20%20text-align%3A%20center%3B%0A%20%20%20%20%7D%0A%20%20%20%20.profile-img%20%7B%0A%20%20%20%20%20%20width%3A%20150px%3B%0A%20%20%20%20%20%20height%3A%20150px%3B%0A%20%20%20%20%20%20border-radius%3A%2050%25%3B%0A%20%20%20%20%20%20border%3A%203px%20solid%20%23dc3545%3B%0A%20%20%20%20%20%20box-shadow%3A%200%200%2025px%20rgba%28220%2C%2053%2C%2069%2C%200.6%29%3B%0A%20%20%20%20%20%20object-fit%3A%20cover%3B%0A%20%20%20%20%20%20margin-bottom%3A%2020px%3B%0A%20%20%20%20%20%20transition%3A%200.3s%3B%0A%20%20%20%20%7D%0A%20%20%20%20.profile-img%3Ahover%20%7B%0A%20%20%20%20%20%20transform%3A%20scale%281.05%29%3B%0A%20%20%20%20%20%20box-shadow%3A%200%200%2040px%20rgba%28220%2C%2053%2C%2069%2C%200.9%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20h1%20%7B%0A%20%20%20%20%20%20font-size%3A%202.7rem%3B%0A%20%20%20%20%20%20font-weight%3A%20800%3B%0A%20%20%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20%20%20text-shadow%3A%200%200%2020px%20%23dc3545%3B%0A%20%20%20%20%7D%0A%20%20%20%20h2%20%7B%0A%20%20%20%20%20%20color%3A%20%23dc3545%3B%0A%20%20%20%20%20%20font-weight%3A%20500%3B%0A%20%20%20%20%20%20font-size%3A%201.5rem%3B%0A%20%20%20%20%20%20margin-bottom%3A%2030px%3B%0A%20%20%20%20%7D%0A%20%20%20%20.btn-main%20%7B%0A%20%20%20%20%20%20background-color%3A%20%23dc3545%3B%0A%20%20%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20%20%20padding%3A%200.8rem%202.2rem%3B%0A%20%20%20%20%20%20border%3A%20none%3B%0A%20%20%20%20%20%20border-radius%3A%2040px%3B%0A%20%20%20%20%20%20font-size%3A%201.1rem%3B%0A%20%20%20%20%20%20font-weight%3A%20600%3B%0A%20%20%20%20%20%20transition%3A%200.3s%20ease%3B%0A%20%20%20%20%20%20box-shadow%3A%200%200%2015px%20rgba%28220%2C%2053%2C%2069%2C%200.6%29%3B%0A%20%20%20%20%20%20cursor%3A%20pointer%3B%0A%20%20%20%20%7D%0A%20%20%20%20.btn-main%3Ahover%20%7B%0A%20%20%20%20%20%20transform%3A%20scale%281.05%29%3B%0A%20%20%20%20%20%20box-shadow%3A%200%200%2025px%20rgba%28220%2C%2053%2C%2069%2C%200.9%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20section%20%7B%0A%20%20%20%20%20%20position%3A%20relative%3B%0A%20%20%20%20%20%20z-index%3A%202%3B%0A%20%20%20%20%20%20padding%3A%205rem%201rem%3B%0A%20%20%20%20%7D%0A%20%20%20%20.about%20%7B%0A%20%20%20%20%20%20background%3A%20%23111%3B%0A%20%20%20%20%20%20border-top%3A%201px%20solid%20%23222%3B%0A%20%20%20%20%20%20border-bottom%3A%201px%20solid%20%23222%3B%0A%20%20%20%20%7D%0A%20%20%20%20.skills%20.card%20%7B%0A%20%20%20%20%20%20background%3A%20%231a1a1a%3B%0A%20%20%20%20%20%20border%3A%20none%3B%0A%20%20%20%20%20%20border-radius%3A%2015px%3B%0A%20%20%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20%20%20transition%3A%200.3s%3B%0A%20%20%20%20%20%20box-shadow%3A%200%200%2010px%20rgba%28255%2C%20255%2C%20255%2C%200.05%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20.skills%20.card%3Ahover%20%7B%0A%20%20%20%20%20%20background%3A%20%23dc3545%3B%0A%20%20%20%20%20%20transform%3A%20translateY%28-6px%29%3B%0A%20%20%20%20%20%20box-shadow%3A%200%200%2025px%20rgba%28220%2C%2053%2C%2069%2C%200.8%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20footer%20%7B%0A%20%20%20%20%20%20text-align%3A%20center%3B%0A%20%20%20%20%20%20padding%3A%202rem%3B%0A%20%20%20%20%20%20border-top%3A%201px%20solid%20%23222%3B%0A%20%20%20%20%20%20color%3A%20%23aaa%3B%0A%20%20%20%20%20%20background%3A%20%23000%3B%0A%20%20%20%20%7D%0A%20%20%20%20.socials%20a%20%7B%0A%20%20%20%20%20%20color%3A%20%23dc3545%3B%0A%20%20%20%20%20%20font-size%3A%201.5rem%3B%0A%20%20%20%20%20%20margin%3A%200%2010px%3B%0A%20%20%20%20%20%20transition%3A%200.3s%3B%0A%20%20%20%20%7D%0A%20%20%20%20.socials%20a%3Ahover%20%7B%0A%20%20%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20%20%20transform%3A%20scale%281.2%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20.typing%20%7B%0A%20%20%20%20%20%20border-right%3A%202px%20solid%20%23dc3545%3B%0A%20%20%20%20%20%20white-space%3A%20nowrap%3B%0A%20%20%20%20%20%20overflow%3A%20hidden%3B%0A%20%20%20%20%20%20animation%3A%20typing%203.5s%20steps%2830%2C%20end%29%20infinite%20alternate%2C%20blink%200.8s%20step-end%20infinite%3B%0A%20%20%20%20%20%20font-size%3A%201.5rem%3B%0A%20%20%20%20%20%20letter-spacing%3A%202px%3B%0A%20%20%20%20%20%20text-shadow%3A%200%200%2015px%20rgba%28220%2C%2053%2C%2069%2C%200.7%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20@keyframes%20typing%20%7B%0A%20%20%20%20%20%20from%20%7B%20width%3A%200%20%7D%0A%20%20%20%20%20%20to%20%7B%20width%3A%20100%25%20%7D%0A%20%20%20%20%7D%0A%20%20%20%20@keyframes%20blink%20%7B%0A%20%20%20%20%20%2050%25%20%7B%20border-color%3A%20transparent%20%7D%0A%20%20%20%20%7D%0A%20%20%20%20/*%20%u0645%u0648%u0628%u0627%u06CC%u0644%20%u0641%u0631%u0646%u062F%u0644%u06CC%20*/%0A%20%20%20%20@media%20%28max-width%3A%20768px%29%20%7B%0A%20%20%20%20%20%20.typing%20%7B%0A%20%20%20%20%20%20%20%20font-size%3A%200.95rem%20%21important%3B%0A%20%20%20%20%20%20%20%20letter-spacing%3A%201px%3B%0A%20%20%20%20%20%20%20%20line-height%3A%201.7%3B%0A%20%20%20%20%20%20%20%20text-shadow%3A%200%200%2010px%20rgba%28220%2C%2053%2C%2069%2C%200.6%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20h1%20%7B%20font-size%3A%201.8rem%20%21important%3B%20%7D%0A%20%20%20%20%20%20header%20%7B%20padding%3A%200%201rem%3B%20%7D%0A%20%20%20%20%7D%0A%20%20%3C/style%3E%0A%3C/head%3E%0A%3Cbody%3E%0A%20%20%3Cdiv%20id%3D%22particles-js%22%3E%3C/div%3E%0A%20%20%3Cheader%3E%0A%20%20%20%20%3Cimg%20src%3D%22https%3A//i.postimg.cc/dQZ1M4B9/77cd2faf6de8074d2ed698b234b39fd4.jpg%22%20alt%3D%22Profile%22%20class%3D%22profile-img%22%3E%0A%20%20%20%20%3Ch1%3E%u06CC%u0627%u0633%u06CC%u0646%20%u0642%u0644%u0646%u062F%u0631%u06CC%3C/h1%3E%0A%20%20%20%20%3Ch2%3E%3Cspan%20class%3D%22typing%22%3E%u0637%u0631%u0627%u062D%20%7C%20%u0628%u0631%u0646%u0627%u0645%u0647%u200C%u0646%u0648%u06CC%u0633%20%7C%20%u062E%u0627%u0644%u0642%20%u0627%u06CC%u062F%u0647%u200C%u0647%u0627%u06CC%20%u062E%u0627%u0635%3C/span%3E%3C/h2%3E%0A%20%20%20%20%3Ca%20href%3D%22%23%22%20id%3D%22rubika-btn%22%20class%3D%22btn-main%22%3E%u0627%u0631%u062A%u0628%u0627%u0637%3C/a%3E%0A%20%20%3C/header%3E%0A%20%20%3Csection%20id%3D%22about%22%20class%3D%22about%20text-center%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22container%22%3E%0A%20%20%20%20%20%20%3Ch3%20class%3D%22text-danger%20mb-3%22%3E%u062F%u0631%u0628%u0627%u0631%u0647%20%u0645%u0646%3C/h3%3E%0A%20%20%20%20%20%20%3Cp%20class%3D%22lead%20text-light%22%3E%0A%20%20%20%20%20%20%20%20%u0645%u0646%20%u06CC%u0627%u0633%u06CC%u0646%20%u0642%u0644%u0646%u062F%u0631%u06CC%20%u0647%u0633%u062A%u0645%20%u2014%20%u0637%u0631%u0627%u062D%20%u0648%20%u062A%u0648%u0633%u0639%u0647%u200C%u062F%u0647%u0646%u062F%u0647%u200C%u06CC%20%u0648%u0628%20%u06A9%u0647%20%u0639%u0627%u0634%u0642%20%u0633%u0627%u062E%u062A%u0646%20%u0686%u06CC%u0632%u0627%u06CC%20%u062E%u0627%u0635%20%u0648%20%u0645%u062A%u0641%u0627%u0648%u062A%u200C%u0640%u0647.%0A%20%20%20%20%20%20%20%20%u0639%u0627%u0634%u0642%20%u062C%u0632%u0626%u06CC%u0627%u062A%u0645%20%u0648%20%u0647%u0645%u06CC%u0634%u0647%20%u062F%u0646%u0628%u0627%u0644%20%u06CC%u0627%u062F%u06AF%u06CC%u0631%u06CC%20%u062A%u06A9%u0646%u0648%u0644%u0648%u0698%u06CC%u200C%u0647%u0627%u06CC%20%u062C%u062F%u06CC%u062F%20%u0628%u0631%u0627%u06CC%20%u0633%u0627%u062E%u062A%20%u062A%u062C%u0631%u0628%u0647%u200C%u0647%u0627%u06CC%20%u062F%u06CC%u062C%u06CC%u062A%u0627%u0644%20%u06AF%u0627%u062F%20%uD83D%uDE0E%0A%20%20%20%20%20%20%3C/p%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%3C/section%3E%0A%20%20%3Csection%20class%3D%22skills%20text-center%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22container%22%3E%0A%20%20%20%20%20%20%3Ch3%20class%3D%22text-danger%20mb-4%22%3E%u0645%u0647%u0627%u0631%u062A%u200C%u0647%u0627%3C/h3%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22row%20g-4%20justify-content-center%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-6%20col-md-3%22%3E%3Cdiv%20class%3D%22card%20py-3%22%3EHTML%3C/div%3E%3C/div%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-6%20col-md-3%22%3E%3Cdiv%20class%3D%22card%20py-3%22%3ECSS%3C/div%3E%3C/div%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-6%20col-md-3%22%3E%3Cdiv%20class%3D%22card%20py-3%22%3EJavaScript%3C/div%3E%3C/div%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-6%20col-md-3%22%3E%3Cdiv%20class%3D%22card%20py-3%22%3EBootstrap%3C/div%3E%3C/div%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-6%20col-md-3%22%3E%3Cdiv%20class%3D%22card%20py-3%22%3EReact%3C/div%3E%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%3C/section%3E%0A%20%20%3Csection%20class%3D%22about%20text-center%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22container%22%3E%0A%20%20%20%20%20%20%3Ch3%20class%3D%22text-danger%20mb-3%22%3E%u0627%u0631%u062A%u0628%u0627%u0637%20%u0628%u0627%20%u0645%u0646%3C/h3%3E%0A%20%20%20%20%20%20%3Cp%20class%3D%22text-light%22%3E%u0628%u0631%u0627%u06CC%20%u0647%u0645%u06A9%u0627%u0631%u06CC%20%u06CC%u0627%20%u0635%u062D%u0628%u062A%u060C%20%u062E%u0648%u0634%u062D%u0627%u0644%20%u0645%u06CC%u200C%u0634%u0645%20%u067E%u06CC%u0627%u0645%20%u0628%u062F%u06CC%20%uD83D%uDCAC%3C/p%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22socials%20mt-3%22%3E%0A%20%20%20%20%20%20%20%20%3Ca%20href%3D%22%23%22%3E%3Ci%20class%3D%22fa-brands%20fa-instagram%22%3E%3C/i%3E%3C/a%3E%0A%20%20%20%20%20%20%20%20%3Ca%20href%3D%22%23%22%3E%3Ci%20class%3D%22fa-brands%20fa-github%22%3E%3C/i%3E%3C/a%3E%0A%20%20%20%20%20%20%20%20%3Ca%20href%3D%22%23%22%3E%3Ci%20class%3D%22fa-brands%20fa-telegram%22%3E%3C/i%3E%3C/a%3E%0A%20%20%20%20%20%20%20%20%3Ca%20href%3D%22%23%22%3E%3Ci%20class%3D%22fa-brands%20fa-linkedin%22%3E%3C/i%3E%3C/a%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%3C/section%3E%0A%20%20%3Cfooter%3E%0A%20%20%20%20%3Csmall%3E%A9%202025%20%7C%20%u0637%u0631%u0627%u062D%u06CC%20%u0634%u062F%u0647%20%u0628%u0627%20%u2764%uFE0F%20%u062A%u0648%u0633%u0637%20%u06CC%u0627%u0633%u06CC%u0646%20%u0642%u0644%u0646%u062F%u0631%u06CC%20%7C%20%u0646%u0633%u062E%u0647%20GOD%20V2%20%uD83D%uDE0E%3C/small%3E%0A%20%20%3C/footer%3E%0A%20%20%3Cscript%20src%3D%22https%3A//cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js%22%3E%3C/script%3E%0A%20%20%3Cscript%20src%3D%22https%3A//cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js%22%3E%3C/script%3E%0A%20%20%3Cscript%3E%0A%20%20%20%20//%20Particles.js%0A%20%20%20%20particlesJS%28%22particles-js%22%2C%20%7B%0A%20%20%20%20%20%20%22particles%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%22number%22%3A%20%7B%20%22value%22%3A%2080%20%7D%2C%0A%20%20%20%20%20%20%20%20%22color%22%3A%20%7B%20%22value%22%3A%20%22%23dc3545%22%20%7D%2C%0A%20%20%20%20%20%20%20%20%22shape%22%3A%20%7B%20%22type%22%3A%20%22circle%22%20%7D%2C%0A%20%20%20%20%20%20%20%20%22opacity%22%3A%20%7B%20%22value%22%3A%200.5%20%7D%2C%0A%20%20%20%20%20%20%20%20%22size%22%3A%20%7B%20%22value%22%3A%203%20%7D%2C%0A%20%20%20%20%20%20%20%20%22move%22%3A%20%7B%20%22speed%22%3A%202%20%7D%0A%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%22interactivity%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%22events%22%3A%20%7B%20%22onhover%22%3A%20%7B%20%22enable%22%3A%20true%2C%20%22mode%22%3A%20%22repulse%22%20%7D%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%29%3B%0A%20%20%20%20//%20%u062A%u0627%u06CC%u067E%u06CC%u0646%u06AF%20%u0645%u062A%u0646%20%u0647%u062F%u0631%0A%20%20%20%20const%20words%20%3D%20%5B%22%u0637%u0631%u0627%u062D%22%2C%20%22%u0628%u0631%u0646%u0627%u0645%u0647%u200C%u0646%u0648%u06CC%u0633%22%2C%20%22%u062E%u0627%u0644%u0642%20%u0627%u06CC%u062F%u0647%u200C%u0647%u0627%u06CC%20%u062E%u0627%u0635%22%5D%3B%0A%20%20%20%20let%20i%20%3D%200%2C%20j%20%3D%200%2C%20currentWord%20%3D%20%27%27%2C%20isDeleting%20%3D%20false%3B%0A%20%20%20%20const%20typeEffect%20%3D%20%28%29%20%3D%3E%20%7B%0A%20%20%20%20%20%20const%20typingElement%20%3D%20document.querySelector%28%22.typing%22%29%3B%0A%20%20%20%20%20%20currentWord%20%3D%20words%5Bi%5D%3B%0A%20%20%20%20%20%20typingElement.textContent%20%3D%20currentWord.substring%280%2C%20j%29%3B%0A%20%20%20%20%20%20if%20%28%21isDeleting%20%26%26%20j%20%3C%20currentWord.length%29%20%7B%0A%20%20%20%20%20%20%20%20j++%3B%0A%20%20%20%20%20%20%20%20setTimeout%28typeEffect%2C%20window.innerWidth%20%3C%20768%20%3F%20150%20%3A%20100%29%3B%0A%20%20%20%20%20%20%7D%20else%20if%20%28isDeleting%20%26%26%20j%20%3E%200%29%20%7B%0A%20%20%20%20%20%20%20%20j--%3B%0A%20%20%20%20%20%20%20%20setTimeout%28typeEffect%2C%2050%29%3B%0A%20%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20if%20%28%21isDeleting%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20isDeleting%20%3D%20true%3B%0A%20%20%20%20%20%20%20%20%20%20setTimeout%28typeEffect%2C%201500%29%3B%0A%20%20%20%20%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%20%20isDeleting%20%3D%20false%3B%0A%20%20%20%20%20%20%20%20%20%20i%20%3D%20%28i%20+%201%29%20%25%20words.length%3B%0A%20%20%20%20%20%20%20%20%20%20setTimeout%28typeEffect%2C%20300%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%3B%0A%20%20%20%20typeEffect%28%29%3B%0A%20%20%20%20//%20%u062F%u06A9%u0645%u0647%20%u0631%u0648%u0628%u06CC%u06A9%u0627%20%u0628%u0627%20%u0627%u0641%u06A9%u062A%20%u0646%u0626%u0648%u0646%20%u0648%20%u0647%u062F%u0627%u06CC%u062A%0A%20%20%20%20const%20rubikaBtn%20%3D%20document.getElementById%28%22rubika-btn%22%29%3B%0A%20%20%20%20rubikaBtn.addEventListener%28%22click%22%2C%20function%28e%29%20%7B%0A%20%20%20%20%20%20e.preventDefault%28%29%3B%0A%20%20%20%20%20%20rubikaBtn.style.transition%20%3D%20%220.5s%22%3B%0A%20%20%20%20%20%20rubikaBtn.style.boxShadow%20%3D%20%220%200%2030px%20rgba%28220%2C%2053%2C%2069%2C%201%29%22%3B%0A%20%20%20%20%20%20rubikaBtn.style.transform%20%3D%20%22scale%281.1%29%22%3B%0A%20%20%20%20%20%20setTimeout%28%28%29%20%3D%3E%20%7B%0A%20%20%20%20%20%20%20%20window.open%28%22https%3A//rubika.ir/Lux_azz%22%2C%20%22_blank%22%29%3B%0A%20%20%20%20%20%20%20%20rubikaBtn.style.transform%20%3D%20%22scale%281%29%22%3B%0A%20%20%20%20%20%20%7D%2C%201000%29%3B%0A%20%20%20%20%7D%29%3B%0A%20%20%3C/script%3E%0A%3C/body%3E%0A%3C/html%3E'));
-</script>
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZYNX | سیستم عملیاتی پیشرفته</title>
+    <!-- بوت‌استرپ 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS برای انیمیشن‌ها -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- فونت و آیکون‌ها -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.fontcdn.ir/css/vazirmatn.css">
+    <style>
+        :root {
+            --neon-blue: #00eaff;
+            --neon-red: #ff3366;
+            --neon-purple: #cc00ff;
+            --dark-bg-1: #060a0f;
+            --card-bg-base: #10141b;
+            --card-bg-glass: rgba(16, 20, 27, 0.4);
+            --text-color-light: #f0f0f0;
+            --border-color: rgba(0, 234, 255, 0.3);
+        }
+
+        body {
+            font-family: 'Vazirmatn', 'Segoe UI', sans-serif;
+            background-color: var(--dark-bg-1);
+            background-image: linear-gradient(rgba(0, 234, 255, 0.05) 1px, transparent 1px),
+                            linear-gradient(90deg, rgba(255, 51, 102, 0.05) 1px, transparent 1px);
+            background-size: 50px 50px;
+            background-attachment: fixed;
+            color: var(--text-color-light);
+            margin: 0;
+            line-height: 1.7;
+            perspective: 1800px;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* افکت Scanline */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background: linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+            background-size: 100% 3px;
+            z-index: 1000;
+            opacity: 0.8;
+        }
+
+        /* افکت پارالاکس پس‌زمینه */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(0, 234, 255, 0.1), rgba(255, 51, 102, 0.1));
+            z-index: -1;
+            animation: bgPulse 10s infinite alternate;
+        }
+
+        @keyframes bgPulse {
+            0% { opacity: 0.3; transform: scale(1); }
+            100% { opacity: 0.5; transform: scale(1.02); }
+        }
+
+        /* اسکرول‌بار */
+        body::-webkit-scrollbar {
+            width: 12px;
+        }
+        body::-webkit-scrollbar-track {
+            background: var(--dark-bg-1);
+        }
+        body::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, var(--neon-blue), var(--neon-purple));
+            border-radius: 6px;
+            box-shadow: 0 0 8px var(--neon-red);
+        }
+
+        /* هدر */
+        header {
+            background: var(--card-bg-base);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9);
+            border-bottom: 3px solid var(--neon-purple);
+            padding: 4rem 1rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .zynx-logo {
+            width: 150px;
+            height: 150px;
+            background-image: url('https://i.postimg.cc/MpcnhFzw/IMG-20251021-093428-508.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            border: 4px solid var(--neon-blue);
+            box-shadow: 0 0 30px var(--neon-blue), 0 0 60px var(--neon-purple);
+            animation: pulse-glow 2.5s infinite alternate;
+            transition: transform 0.5s;
+            margin: 0 auto;
+        }
+
+        .zynx-logo:hover {
+            transform: scale(1.15) rotate(5deg);
+        }
+
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 25px var(--neon-blue), 0 0 50px rgba(0, 234, 255, 0.6); }
+            100% { box-shadow: 0 0 40px var(--neon-blue), 0 0 70px var(--neon-purple); }
+        }
+
+        .header-title {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--neon-red);
+            text-shadow: 0 0 20px var(--neon-red), 0 0 40px var(--neon-purple);
+            animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid var(--neon-blue);
+            margin-top: 1rem;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: var(--neon-blue); }
+        }
+
+        header::after {
+            content: "[CORE-STATUS: ZYNX OS ACTIVE / Ver 3.0 / MAX POWER]";
+            display: block;
+            font-size: 1rem;
+            font-weight: 300;
+            margin-top: 20px;
+            color: var(--neon-blue);
+            text-shadow: 0 0 8px var(--neon-blue);
+        }
+
+        /* تب‌ها */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 3rem 0;
+            padding: 0 2rem;
+            flex-wrap: wrap;
+        }
+
+        .tab-button {
+            background-color: var(--card-bg-base);
+            color: var(--neon-blue);
+            border: 2px solid var(--neon-blue);
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .tab-button:hover {
+            background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
+            color: var(--dark-bg-1);
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px var(--neon-purple);
+        }
+
+        .tab-button.active {
+            background: linear-gradient(45deg, var(--neon-red), var(--neon-purple));
+            color: var(--dark-bg-1);
+            box-shadow: 0 0 25px var(--neon-red);
+            transform: translateY(-5px);
+        }
+
+        /* کارت‌ها */
+        .container {
+            max-width: 1400px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .tab-content.active {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .command-card {
+            background: var(--card-bg-glass);
+            backdrop-filter: blur(20px);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid var(--neon-blue);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.6);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transform-style: preserve-3d;
+        }
+
+        .command-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 0 50px var(--neon-purple);
+            border-color: var(--neon-purple);
+        }
+
+        .command-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            right: -2px;
+            bottom: -2px;
+            left: -2px;
+            border-radius: 15px;
+            background: linear-gradient(45deg, var(--neon-red), var(--neon-blue));
+            z-index: -2;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .command-card:hover::before {
+            opacity: 0.3;
+        }
+
+        .command-title {
+            font-size: 1.8rem;
+            color: var(--neon-red);
+            text-shadow: 0 0 10px var(--neon-red);
+            display: flex;
+            align-items: center;
+        }
+
+        .command-title i {
+            margin-left: 15px;
+            font-size: 2rem;
+            color: var(--neon-blue);
+            filter: drop-shadow(0 0 8px var(--neon-blue));
+        }
+
+        .command-desc {
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            border-top: 1px solid var(--neon-blue);
+            padding-top: 1rem;
+            display: none;
+            color: var(--text-color-light);
+        }
+
+        .command-desc ul {
+            list-style: none;
+            padding: 0;
+            margin: 1rem 0 0 0;
+            border-left: 3px solid var(--neon-blue);
+            padding-right: 15px;
+        }
+
+        .command-desc ul li {
+            padding: 0.7rem 0;
+            border-bottom: 1px dotted rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+        }
+
+        .command-desc ul li i {
+            margin-left: 10px;
+            color: var(--neon-red);
+            opacity: 0.8;
+        }
+
+        /* فوتر */
+        footer {
+            background: var(--card-bg-base);
+            border-top: 2px solid var(--neon-purple);
+            padding: 3rem;
+            text-align: center;
+            color: var(--neon-blue);
+            text-shadow: 0 0 10px var(--neon-blue);
+            margin-top: 4rem;
+        }
+
+        footer::before {
+            content: "[ZYNX LOG: SECURITY PROTOCOL ONLINE]";
+            display: block;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            color: var(--neon-red);
+            text-shadow: 0 0 5px var(--neon-red);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ریسپانسیو */
+        @media (max-width: 1200px) {
+            .container { max-width: 900px; }
+            .tab-content.active { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+        }
+
+        @media (max-width: 768px) {
+            header { padding: 3rem 0.5rem; }
+            .header-title { font-size: 2.5rem; }
+            header::after { font-size: 0.8rem; }
+            .zynx-logo { width: 120px; height: 120px; }
+            .tabs { flex-direction: column; margin: 2rem 0; }
+            .tab-button { padding: 0.8rem 1.5rem; font-size: 0.9rem; }
+            .container { padding: 0 1rem; margin: 2rem auto; }
+            .tab-content.active { grid-template-columns: 1fr; }
+            .command-card { padding: 1.5rem; }
+            .command-title { font-size: 1.5rem; }
+            .command-desc { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-auto">
+                    <div class="zynx-logo"></div>
+                </div>
+                <div class="col-auto">
+                    <h1 class="header-title">ZYNX</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="tabs container">
+        <button class="tab-button btn active" data-tab="group"><i class="fas fa-sitemap"></i> پروتکل‌های مدیریت</button>
+        <button class="tab-button btn" data-tab="ai"><i class="fas fa-brain"></i> هوش مصنوعی & دیتا</button>
+        <button class="tab-button btn" data-tab="locks"><i class="fas fa-shield-alt"></i> سیستم امنیتی</button>
+    </div>
+
+    <div class="container">
+        <div class="tab-content active" id="group">
+            <div class="command-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="command-title"><i class="fas fa-user-tie"></i> تنظیم ادمین</div>
+                <div class="command-desc">تعیین آیدی ادمین اصلی سیستم (مالکیت ربات)</div>
+            </div>
+            <div class="command-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="command-title"><i class="fas fa-user-minus"></i> حذف ادمین</div>
+                <div class="command-desc">حذف دسترسی ادمین اصلی سیستم</div>
+            </div>
+            <div class="command-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="command-title"><i class="fas fa-user-plus"></i> افزودن ادمین</div>
+                <div class="command-desc">اضافه کردن ادمین کمکی (ریپلای روی پیام شخص)</div>
+            </div>
+            <div class="command-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="command-title"><i class="fas fa-volume-mute"></i> سکوت</div>
+                <div class="command-desc">ریپلای روی پیام شخص برای سکوت دادن موقت (Mute)</div>
+            </div>
+            <div class="command-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="command-title"><i class="fas fa-volume-up"></i> حذف سکوت</div>
+                <div class="command-desc">ریپلای روی پیام شخص برای برداشتن محدودیت سکوت</div>
+            </div>
+            <div class="command-card" data-aos="fade-up" data-aos-delay="600">
+                <div class="command-title"><i class="fas fa-user-shield"></i> حالت ایمن</div>
+                <div class="command-desc">فعال‌سازی حالت ایمن (فقط ادمین‌ها و مدیران ارسال می‌کنند)</div>
+            </div>
+            <div class="command-card" data-aos="fade-up" data-aos-delay="700">
+                <div class="command-title"><i class="fas fa-unlock"></i> غیرفعال کردن حالت ایمن</div>
+                <div class="command-desc">غیر فعال‌سازی حالت ایمن و باز کردن گروه برای عموم</div>
+            </div>
+            <div class="command-card" data-aos="fade-up" data-aos-delay="800">
+                <div class="command-title"><i class="fas fa-question-circle"></i> راهنما</div>
+                <div class="command-desc">مشاهده متن راهنمای کامل دستورات</div>
+            </div>
+            <div class="command-card" data-aos="fade-up" data-aos-delay="900">
+                <div class="command-title"><i class="fas fa-camera"></i> /setphoto</div>
+                <div class="command-desc">ریپلای روی یک عکس، جهت ذخیره آن برای نمایش در بخش راهنما</div>
+            </div>
+            <div class="command-card" data-aos="fade-up" data-aos-delay="1000">
+                <div class="command-title"><i class="fas fa-chart-bar"></i> گزارش سیستم</div>
+                <div class="command-desc">مشاهده آمار کلی سیستم (تعداد اعضا، پیام‌ها و...)</div>
+            </div>
+            <div class="command-card" data-aos="fade-up" data-aos-delay="1100">
+                <div class="command-title"><i class="fas fa-poll"></i> آمارم / آمار (ریپلای)</div>
+                <div class="command-desc">مشاهده آمار فعالیت خود یا یک کاربر خاص</div>
+            </div>
+            <div class="command-card" data-aos="fade-up" data-aos-delay="1200">
+                <div class="command-title"><i class="fas fa-keyboard"></i> یادبگیر - [ورودی] - [پاسخ]</div>
+                <div class="command-desc">افزودن پاسخ خودکار (فقط ادمین)</div>
+            </div>
+            <div class="command-card" data-aos="fade-up" data-aos-delay="1300">
+                <div class="command-title"><i class="fas fa-eraser"></i> حذف یادگیری [کلمه]</div>
+                <div class="command-desc">حذف پاسخ خودکار ثبت‌شده با استفاده از کلمه ورودی</div>
+            </div>
+            <div class="command-card" data-aos="fade-up" data-aos-delay="1400">
+                <div class="command-title"><i class="fas fa-list-alt"></i> لیست یادگیری</div>
+                <div class="command-desc">مشاهده لیست تمام پاسخ‌های خودکار ثبت‌شده</div>
+            </div>
+            <div class="command-card" data-aos="fade-up" data-aos-delay="1500">
+                <div class="command-title"><i class="fas fa-calculator"></i> تبدیل [عدد]</div>
+                <div class="command-desc">تبدیل عدد وارد شده به حروف فارسی (مثال: تبدیل 245)</div>
+            </div>
+            <div class="command-card" data-aos="fade-up" data-aos-delay="1600">
+                <div class="command-title"><i class="fas fa-hand-holding-usd"></i> ارز</div>
+                <div class="command-desc">نمایش قیمت روز ارزهای مهم (مانند دلار، یورو و...)</div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="ai">
+            <div class="command-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="command-title"><i class="fas fa-robot"></i> ربات [سؤال]</div>
+                <div class="command-desc">پرسش مستقیم از هسته هوش مصنوعی (AI Core)</div>
+            </div>
+            <div class="command-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="command-title"><i class="fas fa-microphone-alt"></i> هوش [سؤال]</div>
+                <div class="command-desc">تولید پاسخ صوتی (Voice Response) با هوش مصنوعی</div>
+            </div>
+            <div class="command-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="command-title"><i class="fas fa-comment-dots"></i> زینکس خوبی / زینکس مریضم</div>
+                <div class="command-desc">دستورات محاوره‌ای برای شروع مکالمه با ربات</div>
+            </div>
+            <div class="command-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="command-title"><i class="fas fa-volume-down"></i> تنظیم صدا [نام]</div>
+                <div class="command-desc">تغییر صدای ربات (مثال: تنظیم صدا dan)</div>
+            </div>
+            <div class="command-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="command-title"><i class="fas fa-image"></i> تحلیل (ریپلای روی عکس) [سؤال]</div>
+                <div class="command-desc">ارسال یک تصویر و درخواست تحلیل بصری از هوش مصنوعی</div>
+            </div>
+            <div class="command-card" data-aos="fade-up" data-aos-delay="600">
+                <div class="command-title"><i class="fas fa-hand-sparkles"></i> فال</div>
+                <div class="command-desc">نمایش یک تصویر فال (فال حافظ یا مشابه)</div>
+            </div>
+            <div class="command-card" data-aos="fade-up" data-aos-delay="700">
+                <div class="command-title"><i class="fas fa-smile-beam"></i> جوک / بیو / دانستنی / پروفایل</div>
+                <div class="command-desc">دستورات سرگرمی و اطلاعات عمومی</div>
+            </div>
+            <div class="command-card" data-aos="fade-up" data-aos-delay="800">
+                <div class="command-title"><i class="fas fa-calendar-alt"></i> تاریخ</div>
+                <div class="command-desc">نمایش تاریخ شمسی، میلادی و ساعت جاری</div>
+            </div>
+            <div class="command-card" data-aos="fade-up" data-aos-delay="900">
+                <div class="command-title"><i class="fas fa-clock"></i> ساعت</div>
+                <div class="command-desc">نمایش دقیق ساعت سیستم عامل</div>
+            </div>
+            <div class="command-card" data-aos="fade-up" data-aos-delay="1000">
+                <div class="command-title"><i class="fas fa-portrait"></i> عکس پروفایل</div>
+                <div class="command-desc">ذخیره عکس پروفایل شما (فقط در چت خصوصی ربات)</div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="locks">
+            <div class="command-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="command-title"><i class="fas fa-info-circle"></i> وضعیت</div>
+                <div class="command-desc">مشاهده وضعیت فعال/غیرفعال بودن تمامی قفل‌ها و سخنگو</div>
+            </div>
+            <div class="command-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="command-title"><i class="fas fa-lock"></i> قفل &lt;نام قفل&gt;</div>
+                <div class="command-desc">فعال کردن پروتکل قفل موردنظر (مثال: قفل لینک)</div>
+            </div>
+            <div class="command-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="command-title"><i class="fas fa-lock-open"></i> باز &lt;نام قفل&gt;</div>
+                <div class="command-desc">غیرفعال کردن پروتکل قفل موردنظر (مثال: باز لینک)</div>
+            </div>
+            <div class="command-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="command-title"><i class="fas fa-comment-medical"></i> سخنگو روشن</div>
+                <div class="command-desc">فعال کردن پاسخ خودکار سخنگو</div>
+            </div>
+            <div class="command-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="command-title"><i class="fas fa-comment-slash"></i> سخنگو خاموش</div>
+                <div class="command-desc">خاموش کردن پاسخ خودکار سخنگو</div>
+            </div>
+            <div class="command-card command-card-list" data-aos="fade-up" data-aos-delay="600">
+                <div class="command-title"><i class="fas fa-th-list"></i> لیست پروتکل‌های قفل</div>
+                <div class="command-desc">
+                    <ul>
+                        <li><i class="fas fa-link"></i> لینک (Link)</li>
+                        <li><i class="fas fa-image"></i> عکس (Photo)</li>
+                        <li><i class="fas fa-video"></i> ویدیو (Video)</li>
+                        <li><i class="fas fa-music"></i> صوت (Music)</li>
+                        <li><i class="fas fa-microphone"></i> ویس (Voice)</li>
+                        <li><i class="fas fa-sticky-note"></i> استیکر (Sticker)</li>
+                        <li><i class="fas fa-file"></i> فایل (File)</li>
+                        <li><i class="fas fa-archive"></i> آرشیو (Archive)</li>
+                        <li><i class="fas fa-exclamation-triangle"></i> اجرایی (Executable)</li>
+                        <li><i class="fas fa-font"></i> فونت (Font)</li>
+                        <li><i class="fas fa-vote-yea"></i> نظرسنجی (Poll)</li>
+                        <li><i class="fas fa-address-book"></i> کانتکت (Contact)</li>
+                        <li><i class="fas fa-map-marker-alt"></i> لوکیشن (Location)</li>
+                        <li><i class="fas fa-share"></i> فوروارد (Forward)</li>
+                        <li><i class="fas fa-hashtag"></i> هشتگ (Hashtag)</li>
+                        <li><i class="fas fa-sort-numeric-up-alt"></i> اعداد (Numbers)</li>
+                        <li><i class="fas fa-language"></i> انگلیسی (English)</li>
+                        <li><i class="fas fa-skull-crossbones"></i> فحش (Bad Words)</li>
+                        <li><i class="fas fa-grin-beam"></i> ایموجی (Emoji)</li>
+                        <li><i class="fas fa-bug"></i> کد هنگی (Crash Code)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <span style="color: var(--neon-red);">[SYSTEM_ALERT: 0x0A01]</span> دسترسی‌های مدیریتی محدود شده‌اند.
+            <br><span style="color: var(--neon-blue);">[STATUS: ONLINE]</span> تمامی سیستم‌ها در وضعیت عملیاتی قرار دارند.
+        </div>
+    </footer>
+
+    <script>
+        // شروع AOS
+        AOS.init();
+
+        // تنظیم جهت
+        document.documentElement.setAttribute('dir', 'rtl');
+
+        // تب‌ها
+        const buttons = document.querySelectorAll('.tab-button');
+        const contents = document.querySelectorAll('.tab-content');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                buttons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const tab = button.getAttribute('data-tab');
+                contents.forEach(content => {
+                    content.classList.remove('active');
+                    if (content.id === tab) {
+                        content.classList.add('active');
+                    }
+                });
+            });
+        });
+
+        // باز و بسته کردن توضیحات
+        const cards = document.querySelectorAll('.command-card');
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                const desc = card.querySelector('.command-desc');
+                const isVisible = desc.style.display === 'block';
+                cards.forEach(otherCard => {
+                    if (otherCard !== card) {
+                        otherCard.querySelector('.command-desc').style.display = 'none';
+                    }
+                });
+                desc.style.display = isVisible ? 'none' : 'block';
+            });
+        });
+
+        // افکت پارالاکس کارت‌ها
+        document.addEventListener('mousemove', (e) => {
+            if (window.innerWidth > 768) {
+                cards.forEach(card => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const rotateY = 8 * ((x - rect.width / 2) / rect.width);
+                    const rotateX = -8 * ((y - rect.height / 2) / rect.height);
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.03)`;
+                });
+            }
+        });
+
+        cards.forEach(card => {
+            card.addEventListener('mouseleave', () => {
+                if (window.innerWidth > 768) {
+                    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
+                }
+            });
+        });
+    </script>
+</body>
+  </html>
