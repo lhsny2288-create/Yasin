@@ -1,108 +1,136 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>یاسین قلندری | طراح و توسعه‌دهنده وب حرفه‌ای در ایران</title>
-  <meta name="description" content="یاسین قلندری، طراح و توسعه‌دهنده وب حرفه‌ای در ایران با بیش از 5 سال تجربه. طراحی سایت‌های مدرن، واکنش‌گرا و بهینه برای سئو. تخصص در HTML، CSS، JavaScript، React و WordPress. مشاهده پورتفولیو و تماس با یاسین.">
-  <meta name="keywords" content="یاسین قلندری, طراح وب ایران, توسعه دهنده فرانت اند, برنامه نویس وب, پورتفولیو یاسین قلندری, فریلنسر وب, طراحی سایت حرفه ای, سئو تکنیکال">
-  <meta name="author" content="یاسین قلندری">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://yasinghalandari.ir/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>یاسین قلندری | برنامه‌نویس وب و نرم‌افزار در بندرعباس</title>
+<meta name="description" content="یاسین قلندری، برنامه‌نویس وب و نرم‌افزار از بندرعباس. توسعه دهنده React، Node.js، Python و طراحی سایت‌های فروشگاهی و اپلیکیشن‌های مدیریت وظایف.">
+<meta name="keywords" content="یاسین قلندری, برنامه نویس بندرعباس, برنامه نویس وب, توسعه دهنده React, Node.js, Python, طراحی سایت, اپلیکیشن">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Open Graph / Social Media -->
-  <meta property="og:title" content="یاسین قلندری | طراح و توسعه‌دهنده وب حرفه‌ای">
-  <meta property="og:description" content="یاسین قلندری، طراح وب و توسعه‌دهنده فرانت‌اند با تمرکز بر رابط کاربری مدرن و تجربه کاربری بی‌نقص.">
-  <meta property="og:image" content="https://i.postimg.cc/66fghFd5/IMG-20251026-114628-165.webp">
-  <meta property="og:url" content="https://yasinghalandari.ir/">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="fa_IR">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Tahoma', sans-serif; background:#f4f4f9; color:#333; line-height:1.6; }
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="یاسین قلندری | طراح وب حرفه‌ای">
-  <meta name="twitter:description" content="طراح و توسعه‌دهنده وب با تمرکز بر طراحی مدرن و سئو.">
-  <meta name="twitter:image" content="https://i.postimg.cc/66fghFd5/IMG-20251026-114628-165.webp">
+header {
+    background:#005f73;
+    color:white;
+    padding:60px 20px 80px 20px;
+    text-align:center;
+    position:relative;
+}
+.profile-pic {
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid white;
+    box-shadow:0 4px 15px rgba(0,0,0,0.3);
+    margin-bottom:15px;
+    transition: transform 0.3s;
+}
+.profile-pic:hover { transform: scale(1.05); }
+header h1 { font-size:2.2em; margin-bottom:5px; }
+header p { font-size:1.1em; opacity:0.9; }
 
-  <link rel="icon" href="https://i.postimg.cc/66fghFd5/IMG-20251026-114628-165.webp" type="image/webp">
-  
-  <!-- Schema JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "یاسین قلندری",
-    "alternateName": "Yasin Qalandari",
-    "url": "https://yasinghalandari.ir",
-    "image": "https://i.postimg.cc/66fghFd5/IMG-20251026-114628-165.webp",
-    "jobTitle": "طراح و توسعه‌دهنده وب",
-    "description": "یاسین قلندری، طراح وب حرفه‌ای با تخصص در طراحی رابط کاربری، توسعه فرانت‌اند و بهینه‌سازی سئو. بیش از 5 سال تجربه در پروژه‌های تجاری و شخصی.",
-    "email": "yasin3150771951@gmail.com",
-    "sameAs": [
-      "https://instagram.com/yasin.qalandari",
-      "https://github.com/yasinqalandari",
-      "https://t.me/xxzyyys",
-      "https://linkedin.com/in/yasinqalandari"
-    ]
-  }
-  </script>
+section { padding:60px 20px; max-width:900px; margin:auto; }
+h2 { color:#0a9396; margin-bottom:25px; text-align:center; }
 
-  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+.skills {
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+}
+.skill {
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 4px 6px rgba(0,0,0,0.1);
+    flex:1 1 180px;
+    text-align:center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.skill:hover {
+    transform: translateY(-5px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+.skill i {
+    font-size:2em;
+    color:#0a9396;
+    margin-bottom:10px;
+}
 
-  <style>
-    /* ======= سبک‌ها مثل نسخه قبلی ======= */
-    :root{--primary:#00d4dc;--secondary:#ff6b6b;--dark:#0a1a2e;}
-    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
-    html,body{width:100%;overflow-x:hidden;}
-    body{
-      font-family:'Vazirmatn',sans-serif;
-      background:linear-gradient(-45deg,#0f2027,#203a43,#2c5364,#1a2a6c);
-      background-size:400% 400%;
-      animation:gradientBG 15s ease infinite;
-      color:#fff;
-      min-height:100vh;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:flex-start;
-      text-align:center;
-      padding:15px;
-      line-height:1.6;
-    }
-    @keyframes gradientBG{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
-    .container{
-      max-width:700px;
-      width:100%;
-      padding:35px 25px;
-      border-radius:20px;
-      background:rgba(255,255,255,.08);
-      backdrop-filter:blur(12px);
-      border:1px solid rgba(255,255,255,.1);
-      box-shadow:0 15px 40px rgba(0,0,0,.25);
-      animation:fadeInUp 1.2s ease;
-      margin-top:30px;
-    }
-    .profile-img{
-      width:170px;height:170px;
-      object-fit:cover;
-      border:5px solid var(--primary);
-      box-shadow:0 0 40px rgba(0,212,220,.5);
-      margin:0 auto 18px;
-      display:block;
-      transition:all .6s ease;
-      animation:becomeCircle 1.8s ease forwards;
-      clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);
-    }
-    @keyframes becomeCircle{0%{clip-path:polygon(50% 0%,100% 50%,50% 100%,0% 50%);border-radius:0;}100%{clip-path:circle(50%);border-radius:50%;}}
-    .profile-img:hover{transform:scale(1.08);box-shadow:0 0 60px rgba(0,212,220,.8);}
-    h1{font-size:2.9rem;font-weight:900;background:linear-gradient(90deg,#00d4dc,#ff6b6b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:6px;word-wrap:break-word;}
-    h2{font-size:1.2rem;color:#a0e7e5;margin-bottom:16px;font-weight:500;}
-    .typewriter{display:inline-block;overflow:hidden;border-right:2px solid var(--primary);white-space:nowrap;font-weight:500;animation:typing 3.5s steps(30,end),blink .75s step-end infinite;font-size:1.15rem;max-width:100%;}
-    @keyframes typing{from{width:0;}to{width:100%;}}
-    @keyframes blink{from,to{border-color:transparent;}50%{border-color:var(--primary);}}
-    p{max-width:100%;margin:18px auto;font-size:1.1rem;color:#ddd;padding:0 10px;line-height:1.9;text-align:justify;}
-    .skills{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:22px 0;padding:0 10px;}
-    .skill-tag{background:rgba(0,212,220,.15);color:var(--primary);padding:8px 16px;border-radius:50px;font-size:.9rem;font-weight:500;border:1px solid rgba(0,212,220,.3);transition:.3s;}
+section a { color:#94d2bd; text-decoration:none; }
+section a:hover { text-decoration:underline; }
+
+footer {
+    background:#005f73;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+@media(max-width:600px){
+    .skills { flex-direction:column; align-items:center; }
+    .profile-pic { width:120px; height:120px; }
+    header { padding:40px 20px 60px 20px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <img src="https://i.postimg.cc/sXzvbyzf/unnamed-2.jpg" alt="یاسین قلندری" class="profile-pic">
+    <h1>یاسین قلندری</h1>
+    <p>برنامه‌نویس وب و نرم‌افزار | بندرعباس</p>
+</header>
+
+<section>
+    <h2>درباره من</h2>
+    <p>سلام! من یاسین قلندری، برنامه‌نویس وب و نرم‌افزار از بندرعباس هستم. تجربه کار با React، Node.js، Python و طراحی سایت‌ها و اپلیکیشن‌های کاربردی را دارم.</p>
+</section>
+
+<section>
+    <h2>مهارت‌ها</h2>
+    <div class="skills">
+        <div class="skill"><i class="fab fa-html5"></i><div>HTML</div></div>
+        <div class="skill"><i class="fab fa-css3-alt"></i><div>CSS</div></div>
+        <div class="skill"><i class="fab fa-js-square"></i><div>JavaScript</div></div>
+        <div class="skill"><i class="fab fa-react"></i><div>React</div></div>
+        <div class="skill"><i class="fab fa-node"></i><div>Node.js</div></div>
+        <div class="skill"><i class="fab fa-python"></i><div>Python</div></div>
+        <div class="skill"><i class="fas fa-database"></i><div>SQL / NoSQL</div></div>
+    </div>
+</section>
+
+<section>
+    <h2>پروژه‌ها</h2>
+    <div class="projects">
+        <div class="project">
+            <h3>سایت فروشگاهی</h3>
+            <p>یک فروشگاه آنلاین با React و Node.js برای مدیریت محصولات و سفارشات.</p>
+        </div>
+        <div class="project">
+            <h3>اپلیکیشن مدیریت وظایف</h3>
+            <p>اپلیکیشن ساده مدیریت پروژه‌ها و کارهای روزانه با Python و Django.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>تماس با من</h2>
+    <p>شماره تماس: <a href="tel:09308561009">کلیک کن</a></p>
+    <p>ایمیل: <a href="mailto:yasinghalandari3150771951@gmail.com">yasinghalandari</a></p>
+</section>
+
+<footer>
+    &copy; 2025 یاسین قلندری | همه حقوق محفوظ است
+</footer>
+
+</body>
+</html>    .skill-tag{background:rgba(0,212,220,.15);color:var(--primary);padding:8px 16px;border-radius:50px;font-size:.9rem;font-weight:500;border:1px solid rgba(0,212,220,.3);transition:.3s;}
     .skill-tag:hover{background:var(--primary);color:#000;transform:translateY(-2px);}
     .btn{display:inline-block;padding:13px 36px;background:linear-gradient(45deg,#00d4dc,#0099cc);color:#fff;border-radius:50px;text-decoration:none;font-weight:bold;font-size:1.05rem;margin:6px 4px;box-shadow:0 5px 18px rgba(0,212,220,.3);transition:all .3s ease;min-width:130px;}
     .btn:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 8px 22px rgba(0,212,220,.5);}
